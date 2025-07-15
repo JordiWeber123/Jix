@@ -3,15 +3,19 @@ import { useState } from 'react'
 import Navbar from './components/Navbar.tsx'
 import './App.css'
 import Videos from './pages/Videos.tsx'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const hideNavbar = useLocation().pathname === '/';
+
+
+
   return (
 	<div>
-	  <Navbar/>
+	  {!hideNavbar && <Navbar/>}
 	  <Routes>
 		<Route path="/" element={<Home/>}/>
 		<Route path="/Videos" element={<Videos/>}/>

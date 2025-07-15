@@ -9,9 +9,19 @@ export default function Navbar() {
 		  	<img src={JIXLogo} className="object-scale-down h-full cursor-pointer"/>
 		  </button>
 		  <ul className="w-1/3 flex justify-between w-full items-center">
-				<li><Link to= "/" className=" text-white hover:text-[#fbca27] cursor-pointer">HOME</Link></li>
-				<li><Link to= "/Videos" className=" text-white hover:text-[#fbca27] cursor-pointer">VIDEOS</Link></li>
-				<li><button className=" text-white hover:text-[#fbca27] cursor-pointer">WATCH LATER</button></li>
+				<li className="hover:bg-[#fbca27] w-full h-full flex align-center">
+					<Link to= "/" className="w-full h-full text-white cursor-pointer flex items-center justify-center">HOME</Link>
+				</li>
+				<li className="hover:bg-[#fbca27] w-full h-full flex align-center">
+					<Link to= "/Videos" className="w-full h-full text-white cursor-pointer flex items-center justify-center">VIDEOS</Link>
+					</li>
+				<li className="hover:bg-[#fbca27] w-full h-full">
+					<Link to="/" className="w-full h-full text-white cursor-pointer flex items-center justify-center">LIBRARIES</Link>
+				</li>
+				<li className="hover:bg-[#fbca27] w-full h-full">
+					<Link to="/" className="w-full h-full text-white cursor-pointer flex items-center justify-center">WATCH LATER</Link>
+				</li>
+
 		  </ul>
 		  <button className="w-1/3 h-full flex justify-end cursor-pointer">
 		  	<img src={SearchIcon} className="object-scale-down h-full"/>
