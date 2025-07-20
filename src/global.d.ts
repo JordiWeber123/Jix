@@ -4,5 +4,8 @@ declare global {
     ffmpegAPI: {
 		getThumbnail: (filepath :string) => Promise<string>;	
 	};
+	moviesAPI: {
+		getMovies: (dirpath: string) => List
+	}
   }
 }

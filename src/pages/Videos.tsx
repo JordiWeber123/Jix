@@ -1,13 +1,14 @@
 import MovieCard from '../components/MovieCard.tsx'
 import Movie from '../Movie.tsx'
 import NotFound from "../assets/NotFound.png"
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 
 function Videos() {
-	const movies :Movie[] = [{title:"My Movie", studio:"Warner",path:"filepath", tags:[]},
-	]
 	
+	const movies :Movie[] = [{id: "1", title:"Jewelz Blu is an fuckable fairy princess", studio:"Bzz",path:"C:/Users/miste/Programming/MovieVisualizer/Jix/src/videos_test/Jewelz Blu is an fuckable fairy princess.mp4", tags:[]},
+	]
+
 	if (movies.length === 0) {
 
 		return (<div className="flex justify-center w-full h-full">
